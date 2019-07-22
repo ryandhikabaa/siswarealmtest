@@ -78,6 +78,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 kelas.setText("");
                 umur.setText("");
                 alamat.setText("");
+
+                startActivity(new Intent(MainActivity.this, SiswaActivity.class));
             }else {
                 Toast.makeText(MainActivity.this, "Terdapat inputan yang kosong", Toast.LENGTH_SHORT).show();
             }
