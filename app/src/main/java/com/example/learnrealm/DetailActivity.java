@@ -66,7 +66,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         if (v == btn_ubah){
-            realmHelper.update(id , etNama.getText().toString(), Integer.parseInt(etAbsen.getText().toString()),etNama.getText().toString(), Integer.parseInt(etUmur.getText().toString()),etAlamat.getText().toString() );
+            realmHelper.update(id , etNama.getText().toString(), Integer.parseInt(etAbsen.getText().toString()),etKelas.getText().toString(), Integer.parseInt(etUmur.getText().toString()),etAlamat.getText().toString() );
             Toast.makeText(DetailActivity.this, "Update Success", Toast.LENGTH_SHORT).show();
             etNama.setText("");
             etAbsen.setText("");
