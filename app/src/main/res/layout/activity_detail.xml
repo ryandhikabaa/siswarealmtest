@@ -1,78 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
     tools:context=".DetailActivity">
 
-    <EditText
-        android:id="@+id/et_nama"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarDetail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan Nama Siswa"
-        android:inputType="textPersonName"/>
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Detail Data Siswa" />
 
-    <EditText
-        android:layout_below="@+id/et_nama"
-        android:id="@+id/et_absen"
+    <RelativeLayout
+        android:layout_below="@+id/toolbarDetail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="Masukkan Absen"/>
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
 
-    <EditText
-        android:layout_below="@+id/et_absen"
-        android:id="@+id/et_kelas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan Kelas"
-        android:inputType="text"/>
+        <EditText
+            android:id="@+id/et_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Nama Siswa"
+            android:inputType="textPersonName"/>
 
-    <EditText
-        android:layout_below="@+id/et_kelas"
-        android:id="@+id/et_umur"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="Masukkan Umur"/>
+        <EditText
+            android:layout_below="@+id/et_nama"
+            android:id="@+id/et_absen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Masukkan Absen"/>
 
-    <EditText
-        android:layout_below="@+id/et_umur"
-        android:id="@+id/et_alamat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan Alamat"
-        android:inputType="text"/>
+        <EditText
+            android:layout_below="@+id/et_absen"
+            android:id="@+id/et_kelas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Kelas"
+            android:inputType="text"/>
 
-    <LinearLayout
-        android:layout_below="@id/et_alamat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true">
+        <EditText
+            android:layout_below="@+id/et_kelas"
+            android:id="@+id/et_umur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Masukkan Umur"/>
 
-        <Button
-            android:id="@+id/btnUpdate"
+        <EditText
+            android:layout_below="@+id/et_umur"
+            android:id="@+id/et_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Alamat"
+            android:inputType="text"/>
+
+        <LinearLayout
+            android:layout_below="@id/et_alamat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Perbarui"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true">
 
-        <Button
-            android:id="@+id/btnHapus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hapus"/>
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_round"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"
+                android:text="Perbarui"/>
 
-        <Button
-            android:id="@+id/btnCancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kembali"/>
+            <Button
+                android:id="@+id/btnHapus"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_round"
+                android:textColor="@color/white"
+                android:text="Hapus"/>
 
-    </LinearLayout>
+            <!--<Button-->
+                <!--android:id="@+id/btnCancel"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/edit_round"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:text="Kembali"/>-->
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
 
 </RelativeLayout>

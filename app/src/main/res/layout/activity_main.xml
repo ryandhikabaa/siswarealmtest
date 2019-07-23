@@ -7,7 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarinput"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Input Data Siswa" />
+
     <LinearLayout
+        android:layout_below="@id/toolbarinput"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
@@ -49,17 +58,25 @@
             android:inputType="text"/>
 
 
+
         <Button
             android:id="@+id/btnSimpan"
-            android:layout_marginTop="20dp"
-            android:layout_width="fill_parent"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="Simpan"/>
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edit_round"
+            android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+            android:text="Simpan"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnTampil"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             android:text="Lihat Mahasiswa"/>
 
     </LinearLayout>
